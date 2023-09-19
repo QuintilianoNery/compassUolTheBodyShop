@@ -1,0 +1,24 @@
+{
+  "name": "compassuolthebodyshop",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">compassUolTheBodyShop</h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuintilianoNery/compassUolTheBodyShop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuintilianoNery/compassUolTheBodyShop/issues"
+  },
+  "homepage": "https://github.com/QuintilianoNery/compassUolTheBodyShop#readme",
+  "dependencies": {
+    "cypress": "^12.17.4",
+    "faker-br": "^0.4.1"
+  }
+}
