@@ -4,7 +4,7 @@
 
 --------
 
-## Configurando o Ambiente :gear
+## Configurando o Ambiente :gear:
 
 - [Cypress.io](http://www.cypress.io)
 
