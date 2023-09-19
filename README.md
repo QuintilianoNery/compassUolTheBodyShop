@@ -4,7 +4,7 @@
 
 --------
 
-## Configurando o Ambiente :gear:
+## Configurando o Ambiente
 
 - [Cypress.io](http://www.cypress.io)
 
@@ -26,7 +26,7 @@ npm install cypress@12.17.4 -d
 npm i faker-br --dev
 ```
 
-### Comandos para iniciar o Cypress :gear
+### Comandos para iniciar o Cypress
 
 #### Iniciar o Cypress no navegador
 
