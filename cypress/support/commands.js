@@ -10,7 +10,7 @@ Cypress.Commands.add('acessarPaginaEValidar', (pagina, url) => {
 
 // -- Commands Home --
 Cypress.Commands.add('validarHomeEClicarEmEntrar', (url) => {
-    cy.intercept('GET', 'https://production.na01.natura.com/s/TbsBrazil/dw/shop/v20_10/baskets/**').as('homeThebodyshop');
+    cy.intercept('GET', 'https://production.na01.natura.com/s/TbsBrazil/dw/shop/**').as('homeThebodyshop');
     cy.wait('@homeThebodyshop');
     cy.get('header[class*="MuiPaper-elevation2"] div[class*=NatDSAppBarHighlight]').eq(1).should('be.visible');
     cy.get('header[class*="MuiAppBar-colorPrimary"]').should('be.visible');
@@ -47,10 +47,10 @@ Cypress.Commands.add('cadastrarNovoUsuario', (url, nome, sobrenome, email, senha
     cy.get('button[type="submit"]').should('be.visible').click({ force: true });
 });
 
-Cypress.Commands.add('validarUsuarioCadastradoComSucesso', (url) => {
-    cy.intercept('GET', 'https://production.na01.natura.com/s/TbsBrazil/dw/shop/**').as('homeThebodyshop');
-    cy.wait('@homeThebodyshop');
-    cy.validarUrl(url);
+Cypress.Commands.add('validarUsuarioCadastradoComSucesso', (nome) => {
+    cy.intercept('POST', 'https://production.na01.natura.com/s/TbsBrazil/dw/**').as('aguardarRetornoHome');
+    // cy.intercept('GET', 'https://www.thebodyshop.com.br/**').as('homeThebodyshop');
+    cy.wait('@aguardarRetornoHome');
     cy.get('h6[class="MuiTypography-root MuiTypography-subtitle2"]').should('contain.text', `Olá, ${nome}!`)
     cy.log('Usuario cadastrado com sucesso!')
 });

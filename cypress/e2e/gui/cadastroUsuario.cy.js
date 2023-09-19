@@ -21,7 +21,8 @@ describe('Cadastro de usuario', () => {
     it('Cadastrar usuario preenchendo todos os campos', () => {
       cy.validarHomeEClicarEmEntrar(url.thebodyshopLogin);
       cy.cadastrarNovoUsuario(url.thebodyshopCadastro, nome, sobrenome, email, senha, cpf, data, numero);
-      cy.validarUsuarioCadastradoComSucesso(url.thebodyshopHome);
+      cy.validarUsuarioCadastradoComSucesso(nome);
+      cy.validarUrl(url.thebodyshopHome);
     });
   });
 })
