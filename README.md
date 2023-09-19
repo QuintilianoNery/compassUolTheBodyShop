@@ -39,13 +39,3 @@ npm i faker-br --dev
 ```shell
    npx cypress run
 ```
-
-OBS.: Para executar os testes usando o Allure report, é só executar os três scripts um após o outro, que estão no arquivo package.json
-
-Este pode ser disponibilizado após ser gerado em um servidor de CI/CD, como o Git ou Azure devops, por exemplo.
-
-```shell
-   npx cypress run --config video=false --env allure=true
-   allure generate allure-results
-   allure open allure-report
-```
