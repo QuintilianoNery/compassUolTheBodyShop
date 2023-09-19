@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/QuintilianoNery/compassUolTheBodyShop#readme",
   "dependencies": {
-    "cypress": "^12.17.4"
+    "cypress": "^12.17.4",
+    "faker-br": "^0.4.1"
   }
 }
