@@ -1,6 +1,5 @@
 {
   "thebodyshopHome": "https://www.thebodyshop.com.br/",
   "thebodyshopLogin": "https://www.thebodyshop.com.br/login",
-  "thebodyshopCadastro": "https://www.thebodyshop.com.br/cadastre-se?redirect=%2F",
-  "thebodyshopMinhaConta": "https://production.na01.natura.com/s/TbsBrazil/dw/shop/**/sessions"
+  "thebodyshopCadastro": "https://www.thebodyshop.com.br/cadastre-se?redirect=%2F"
 }
