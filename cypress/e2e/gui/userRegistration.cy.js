@@ -22,7 +22,7 @@ describe('User registration', () => {
       cy.validateHomeAndClickEnter(url.thebodyshopLogin);
       cy.criateNewUser(url.thebodyshopCadastro, name, lastName, email, password, cpf, dateOfBirth, phone);
       cy.validateSuccessfullyRegisteredUser(name);
-      cy.alidateUrl(url.thebodyshopHome);
+      cy.validateUrl(url.thebodyshopHome);
     });
   });
 })

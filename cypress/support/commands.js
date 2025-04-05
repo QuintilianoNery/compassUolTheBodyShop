@@ -1,11 +1,11 @@
 // -- Global Commands --
-Cypress.Commands.add('alidateUrl', (url) => {
+Cypress.Commands.add('validateUrl', (url) => {
     cy.url().should('contain', url);
 })
 
 Cypress.Commands.add('accessPageAndValidate', (page, url) => {
     cy.visit(page);
-    cy.alidateUrl(url);
+    cy.validateUrl(url);
 });
 
 // -- Home Page Commands --
@@ -15,7 +15,7 @@ Cypress.Commands.add('validateHomeAndClickEnter', (url) => {
     cy.get('header[class*="MuiPaper-elevation2"] div[class*=NatDSAppBarHighlight]').eq(1).should('be.visible');
     cy.get('header[class*="MuiAppBar-colorPrimary"]').should('be.visible');
     cy.get('a[data-testid="header-login-button"] span[class="MuiTypography-root MuiTypography-caption MuiTypography-colorInherit"]').should('be.visible').click();
-    cy.alidateUrl(url);
+    cy.validateUrl(url);
 });
 
 // -- Login page commands --
@@ -29,7 +29,7 @@ Cypress.Commands.add('validatePageLogin', () => {
 Cypress.Commands.add('criateNewUser', (url, name, lastName, email, password, cpf, dateOfBirth, phone) => {
     cy.validatePageLogin();
     cy.get('button[type="button"][class*="MuiButton-fullWidth"]').should('be.visible').click();
-    cy.alidateUrl(url);
+    cy.validateUrl(url);
     cy.get('div[class*="MuiPaper-rounded"]').should('be.visible');
     cy.get('input[name="firstName"]').should('be.visible').type(name);
     cy.get('input[name="lastName"]').should('be.visible').type(lastName);
